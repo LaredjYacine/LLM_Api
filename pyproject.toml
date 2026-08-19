@@ -1,0 +1,20 @@
+[project]
+name = "llm-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Lynix Dancho", email = "laredjyacine955@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.141.1",
+    "google>=3.0.0",
+]
+
+[project.scripts]
+llm-api = "llm_api:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
