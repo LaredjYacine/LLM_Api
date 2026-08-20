@@ -10,22 +10,37 @@ dotenv.load_dotenv()
 client = OpenAI(base_url="http://localhost:11434/v1/",api_key='ollama')
 NomicModel='nomic-embed-text'
 
+
+def cosineSimilarities(A,B):
+    product = np.dot(np.array(A),np.array(B))
+    MagnitudeA = np.linalg.norm(np.array(A))
+    MagnitudeB = np.linalg.norm(np.array(B))
+    dotmag=MagnitudeA * MagnitudeB
+    CosineSimilarity = np.divide(product,dotmag)
+    return CosineSimilarity 
+
 def getEmbedding(text, NomicModel):
     text = text.replace('\n', ' ')
     return client.embeddings.create(input = text,model=NomicModel).data[0].embedding
 
-df = pd.read_csv('archive/Reviews.csv')
-df['combined']= df['Summary'] + '' + df['Text']
+df=pd.read_csv('archive/Embeddedoutput')
 
-test= df['combined'].head(5)
+df['ada_embedding']=df['ada_embedding'].apply(eval).apply(np.array)
 
-df['ada_embedding']= test.apply(
-    lambda x : getEmbedding(x,NomicModel)
-)
 
-df.to_csv("archive/embedded_1k_reviews.csv", index=False)
-df = pd.read_csv("archive/embedded_1k_reviews.csv")
-df["ada_embedding"] = df['ada_embedding'].apply(eval).apply(np.array)
+
+def search_embedding(df:pd.DataFrame, query,pprint=True):
+    embedding = getEmbedding(query,NomicModel)
+    df['similarities'] = df['ada_embedding'].apply(
+        lambda x: cosineSimilarities(x,embedding)
+    )
+    res = df.sort_values('similarities', ascending=False)
+    return res
+
+
+
+res = search_embedding(df,' dog')
+print(res)
 
 # response = client.embeddings.create(
 #     model="nomic-embed-text",
