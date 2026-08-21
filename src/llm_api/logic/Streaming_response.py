@@ -52,7 +52,8 @@ def parsedStream(input:str):
         text_format=Stream_Output
     )as stream:
         for event in stream:
-            if getattr(event, "type", None) == "response.output_text.delta":
+            if getattr(event, "type", None) == "response.output_text.delta" and event.delta is not None:
+                
                 yield event.delta
 
 
@@ -60,16 +61,17 @@ def parsedStream(input:str):
 
 parsedStream('whats your name identify urself')
 
-# app = FastAPI()
+app = FastAPI()
 
 
-# @app.get('/Stream/{input}' ,response_class=EventSourceResponse)
-# def streamresponse(input : str ):
-#     res =streamAi(input)
+@app.get('/Stream/{input}' ,response_class=EventSourceResponse)
+def streamresponse(input : str ):
+    res =streamAi(input)
     
-#     return res  
+    return res  
     
 
-# @app.get('/Parsed/{input}', responses=EventSourceResponse)
-# def response(input:str):
-#     return parsedStream(input)
+@app.get('/Parsed/{input}', response_class=EventSourceResponse)
+def response(input:str):
+    res =parsedStream(input)
+    return res  
