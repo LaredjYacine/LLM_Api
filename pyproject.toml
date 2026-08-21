@@ -13,6 +13,7 @@ dependencies = [
     "numpy>=2.4.6",
     "openai>=3.3.1",
     "pandas>=3.0.5",
+    "pydantic>=2.13.4",
     "qwen-tokenizer>=0.3.0",
     "redis>=8.1.0",
     "uvicorn>=0.52.4",
