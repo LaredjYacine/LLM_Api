@@ -95,8 +95,6 @@ def few_shot(userinput:str):
     )
     return res
 
-
-
 def zero_shot(userinput:str):
     res = client.responses.parse(
         model=qwen,
