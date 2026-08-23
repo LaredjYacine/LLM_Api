@@ -1,15 +1,17 @@
 from fastapi import FastAPI
-import os
-import dotenv
 from openai import OpenAI
 import pandas as pd 
-
+import psycopg2
 import numpy as np
-dotenv.load_dotenv()
-
+from ..models.Credintials import password,port,hostname,username,qwen,NomicModel
+from ..models.Connections import getsyncConnection,create_engine
 client = OpenAI(base_url="http://localhost:11434/v1/",api_key='ollama')
-NomicModel='nomic-embed-text'
-qwen = 'qwen2.5-coder:3b'
+
+
+
+engine = create_engine()
+session  = getsyncConnection(engine)
+
 
 # df = pd.read_csv('archive/Reviews.csv')
 # df = df[:101]
