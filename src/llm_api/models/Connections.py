@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine,Engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker,Session
 from .Credintials import username,hostname,password,port
 
 def getsyncConnection():
@@ -12,10 +12,6 @@ def getsyncConnection():
 
 
 
-def createSyncSession(engine:Engine):
-    try : 
-        Session = sessionmaker(bind=engine)
-        session = Session()
-        return session
-    except Exception as e: 
-        print('an error occured when creating a Session ', e )
+def createSyncSession(engine:Engine) -> Session:
+    SessionMaker= sessionmaker(bind=engine)
+    return SessionMaker()

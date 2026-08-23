@@ -1,12 +1,15 @@
-from sqlalchemy.orm import declarative_base,mapped_column,Mapped
-from sqlalchemy import Column,BigInteger
+from sqlalchemy.orm import DeclarativeBase,mapped_column,Mapped
+from sqlalchemy import Column,BigInteger,String
 
 from pgvector import Vector
-class Base(declarative_base):
+class Base(DeclarativeBase):
     pass
 
 
-class EmbeddingVector(Base):
-    __tablename__='EmbeddingV'
-    id : Mapped[int] =mapped_column(type_=BigInteger,primary_key=True) 
-    embedding : Mapped[list[float]] =mapped_column( Vector(768))
+
+class EmbeddedItems(Base):
+    __tablename__ ='EmbeddTable'
+    ProfileName=Mapped[str]= mapped_column(String,nullable=False)
+    Combined = Mapped[str]=mapped_column(String , nullable=False)
+    Embedding : Mapped[list[float]] =mapped_column( Vector(768))
+    
