@@ -1,7 +1,7 @@
 from sqlalchemy.orm import DeclarativeBase,mapped_column,Mapped
 from sqlalchemy import Column,BigInteger,String
 
-from pgvector import Vector
+from pgvector.sqlalchemy import Vector
 class Base(DeclarativeBase):
     pass
 
@@ -9,7 +9,8 @@ class Base(DeclarativeBase):
 
 class EmbeddedItems(Base):
     __tablename__ ='EmbeddTable'
-    ProfileName=Mapped[str]= mapped_column(String,nullable=False)
-    Combined = Mapped[str]=mapped_column(String , nullable=False)
+    id: Mapped[int] = mapped_column(BigInteger,primary_key=True)
+    ProfileName:Mapped[str]= mapped_column(String,nullable=False)
+    Combined : Mapped[str]=mapped_column(String , nullable=False)
     Embedding : Mapped[list[float]] =mapped_column( Vector(768))
     
