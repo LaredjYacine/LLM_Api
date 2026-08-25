@@ -23,6 +23,7 @@ def search_embedding(query:str):
         format_chunk = f"the product review : {item.Combined} | Reviwer : {item.ProfileName}\n"
         results.append(format_chunk)
     chat_bot_input = '\n'.join(results)
+    session.close()
     return chat_bot_input
         
 

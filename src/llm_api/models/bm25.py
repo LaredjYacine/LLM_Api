@@ -9,28 +9,27 @@ import Stemmer
 
 engine = getsyncConnection()
 stemmer = Stemmer.Stemmer('english')
-session : Session= createSyncSession(engine)
 
 
 
 def Extract():
-    Rows = session.scalars(select(EmbeddedItems.Combined)).all()
-    return Rows
+    session : Session= createSyncSession(engine)
+    try :
+        Rows = session.scalars(select(EmbeddedItems.Combined)).all()
+        return [str(row)for row in Rows]
+    finally: 
+        session.close()
 
 
 
-def Transform(Rows):
-    data =[]
-    for Row in Rows :
-        data.append(Row)
+def Transform(data):
+    if not Rows : 
+        raise ValueError('no data found to index')
      
     Bmdata= bm.tokenize(data,stemmer=stemmer,stopwords='en')
     retriever = bm.BM25()
     retriever.index(Bmdata)
     retriever.save('bm25Retriever', corpus=data)
-
-
-
 
 def load():
     retriever_corpus =bm.BM25.load('bm25Retriever', load_corpus=True)
@@ -42,6 +41,5 @@ def load():
 Rows = Extract()
 Transform(Rows)
 retriever = load()
-
 
 
