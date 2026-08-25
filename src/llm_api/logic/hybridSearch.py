@@ -10,31 +10,53 @@ from ..models.model import EmbeddedItems
 from sqlalchemy import select 
 import numpy as np 
 TEST_QUERIES = [
+    # --- Keyword-favors-BM25: rare exact terms, little semantic scaffolding ---
     {
-        "query": "Looking for canned dog food that looks like stew and has good quality for a finicky Labrador.",
-        "relevant_ids": ["1"],
-    },
-    {
-        "query": "Product arrived labeled as Jumbo Salted Peanuts but contained small unsalted ones.",
-        "relevant_ids": ["2"],
-    },
-    {
-        "query": "Where can I find the review about Turkish Delight citrus gelatin candy with filberts mentioned in C.S. Lewis stories?",
-        "relevant_ids": ["3"],
-    },
-    {
-        "query": "Review complaining about a medicinal cherry flavor tasting like Robitussin cough medicine.",
+        "query": "Robitussin",
         "relevant_ids": ["4"],
     },
     {
-        "query": "Great deal on a wide assortment of yummy taffy with very quick delivery.",
-        "relevant_ids": ["5"],
+        "query": "Ass Kickin brand peanuts",
+        "relevant_ids": ["53"],
     },
     {
-        "query": "Ordered a five-pound bag of assorted flavored taffy that lasted two weeks with too many licorice pieces.",
+        "query": "Dolce Gusto machine",
+        "relevant_ids": ["31"],
+    },
+
+    # --- Semantic-favors-vector: same meaning, no shared keywords ---
+    {
+        "query": "A candy that reminds someone of a fantasy novel where a child betrays his siblings for something sweet",
+        "relevant_ids": ["3"],  # Turkish Delight / C.S. Lewis review, no literal keyword overlap
+    },
+    {
+        "query": "Living abroad and struggling to get a favorite American snack shipped overseas",
+        "relevant_ids": ["21", "22", "25"],  # all Twizzlers-overseas reviews, different wording each
+    },
+    {
+        "query": "A spicy snack that turned out not to be spicy at all despite the packaging",
+        "relevant_ids": ["54"],
+    },
+
+    # --- Multi-relevant / distractor-heavy: many similar reviews, need the RIGHT subset ---
+    {
+        "query": "Dog food that helped with itching and skin allergies",
+        "relevant_ids": ["84", "85", "86", "87", "89", "92", "96", "98", "99"],
+    },
+    {
+        "query": "Instant oatmeal that turned out mushy or bland",
+        "relevant_ids": ["46", "48", "51"],
+    },
+    {
+        "query": "Taffy order with too much licorice flavor mixed in",
         "relevant_ids": ["6"],
     },
-    
+
+    # --- Ambiguous / underspecified, real-user phrasing ---
+    {
+        "query": "candy that had no real flavor, just tasted like plain red sugar",
+        "relevant_ids": ["27"],
+    },
 ]
 engine = getsyncConnection()
 session = createSyncSession(engine=engine)
