@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
+    "bm25s>=0.3.10",
     "dotenv>=0.9.9",
     "fastapi>=0.141.1",
     "numpy>=2.4.6",
@@ -16,6 +17,7 @@ dependencies = [
     "pgvector>=0.5.0",
     "psycopg2>=2.9.12",
     "pydantic>=2.13.4",
+    "pystemmer>=3.1.0",
     "qwen-tokenizer>=0.3.0",
     "redis>=8.1.0",
     "sqlalchemy>=2.0.52",
