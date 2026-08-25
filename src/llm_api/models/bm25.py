@@ -15,18 +15,19 @@ stemmer = Stemmer.Stemmer('english')
 def Extract():
     session : Session= createSyncSession(engine)
     try :
-        Rows = session.scalars(select(EmbeddedItems.Combined)).all()
-        return [str(row)for row in Rows]
+        Rows = session.execute(select(EmbeddedItems.id, EmbeddedItems.Combined)).all()
+        return [{"id": str(row.id), "text": str(row.Combined)} for row in Rows]
     finally: 
         session.close()
 
 
 
 def Transform(data):
-    if not Rows : 
+    if not  data: 
         raise ValueError('no data found to index')
-     
-    Bmdata= bm.tokenize(data,stemmer=stemmer,stopwords='en')
+
+    text = [item['text'] for item in data]
+    Bmdata= bm.tokenize(text,stemmer=stemmer,stopwords='en')
     retriever = bm.BM25()
     retriever.index(Bmdata)
     retriever.save('bm25Retriever', corpus=data)
