@@ -10,9 +10,12 @@ requires-python = ">=3.11"
 dependencies = [
     "bm25s>=0.3.10",
     "cohere>=7.0.9",
+    "datasets>=5.0.1",
+    "deepeval>=4.2.0",
     "dotenv>=0.9.9",
     "fastapi>=0.141.1",
     "numpy>=2.4.6",
+    "ollama>=0.6.2",
     "openai>=3.3.1",
     "pandas>=3.0.5",
     "pgvector>=0.5.0",
