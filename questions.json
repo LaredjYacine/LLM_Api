@@ -1,0 +1,252 @@
+[
+  {
+    "question": "Is the Vitality canned dog food from this review of good quality?",
+    "expected_answer": "Good Quality Dog Food",
+    "id": 1
+  },
+  {
+    "question": "Jumbo salted peanuts labeled as what size?",
+    "expected_answer": "small sized unsalted",
+    "id": 2
+  },
+  {
+    "question": "What is this confection?",
+    "expected_answer": "This is a light, pillowy citrus gelatin with nuts, cut into tiny squares and coated with powdered sugar, and described as a tiny mouthful of heaven. ",
+    "id": 3
+  },
+  {
+    "question": "Does this product have a medicinal flavor?",
+    "expected_answer": "The flavor is very medicinal.",
+    "id": 4
+  },
+  {
+    "question": "What are the qualities of this taffy?",
+    "expected_answer": "Great taffy, yummy, deals, wide assortment",
+    "id": 5
+  },
+  {
+    "question": "What flavor of taffy do you like?",
+    "expected_answer": "melon, peppermint",
+    "id": 6
+  },
+  {
+    "question": "What did you think about the quality of the taffy flavors?",
+    "expected_answer": "Great flavors",
+    "id": 7
+  },
+  {
+    "question": "What flavor of taffy is described as 'amazing'? ",
+    "expected_answer": "amazing",
+    "id": 8
+  },
+  {
+    "question": "Do you have any suggestions for grass supplements?",
+    "expected_answer": "Yes, you can rotate it around with Wheatgrass and Rye too.",
+    "id": 9
+  },
+  {
+    "question": "Good dog food for puppies",
+    "expected_answer": "Good for their digestion. Also good for small puppies. My dog eats her required amount at every feeding. Healthy Dog Food",
+    "id": 10
+  },
+  {
+    "question": "What makes Tequila Picante Gourmet de Inclan stand out as one of a kind?",
+    "expected_answer": "It has a unique combination of ingredients that creates a distinct and flavorful hot sauce.",
+    "id": 11
+  },
+  {
+    "question": "Does the product make your chubby boy lose weight?",
+    "expected_answer": "Yes, the product has helped my chubby boy lose weight.",
+    "id": 12
+  },
+  {
+    "question": "Are my cats happy with the new food?",
+    "expected_answer": "No",
+    "id": 13
+  },
+  {
+    "question": "What does the reviewer say about the freshness and quality of these Twizzlers?",
+    "expected_answer": "they were fresh and delicious!",
+    "id": 14
+  },
+  {
+    "question": "Where can I buy Strawberry Twizzlers?",
+    "expected_answer": "Online or grocery store",
+    "id": 15
+  },
+  {
+    "question": "Does this product contain six strawberry twizzlers?",
+    "expected_answer": "Yes",
+    "id": 16
+  },
+  {
+    "question": "Is it good to eat this snack while watching TV or looking at movies?",
+    "expected_answer": "yes",
+    "id": 17
+  },
+  {
+    "question": "Do you have any positive experiences with Twizzlers?",
+    "expected_answer": "I am very satisfied with my Twizzler purchase.  I shared these with others and we have all enjoyed them.  I will definitely be ordering more. Love it!",
+    "id": 18
+  },
+  {
+    "question": "Twizzlers Strawberry - Lancaster PA - Y & S Candies Inc. - Kosher - Sweet candy review",
+    "expected_answer": "Twizzlers, Strawberry my childhood favorite candy, made in Lancaster Pennsylvania by Y & S Candies, Inc. one of the oldest confectionery Firms in the United States, now a Subsidiary of the Hershey Company, the Company was established in 1845 as Young and Smylie, they also make Apple Licorice Twists, Green Color and Blue Raspberry Licorice Twists, I like them all. I keep it in a dry cool place because is not recommended it to put it in the fridge. According to the Guinness Book of Records, the longest Licorice Twist ever made measured 1.200 Feet (370 M) and weighted 100 Pounds (45 Kg) and was made by Y & S Candies, Inc. This Record-Breaking Twist became a Guinness World Record on July 19, 1998. This Product is Kosher! Thank You GREAT SWEET CANDY! ",
+    "id": 19
+  },
+  {
+    "question": "What was delivered as a gift?",
+    "expected_answer": "twizlers",
+    "id": 20
+  },
+  {
+    "question": "Do these Twizzlers always arrive fresh and tasty?",
+    "expected_answer": "Always fresh and tasty",
+    "id": 21
+  },
+  {
+    "question": "Does anyone have Twizzlers in this size?",
+    "expected_answer": "Yes, the review mentions that Twizzlers are generously included in each 16-ounce bag.",
+    "id": 22
+  },
+  {
+    "question": "quality of candy from childhood",
+    "expected_answer": "still a superb product you won't be disappointed with.",
+    "id": 23
+  },
+  {
+    "question": "What is the name of the candy mentioned in the review?",
+    "expected_answer": "Twizzlers",
+    "id": 24
+  },
+  {
+    "question": "What is the review about Twizzlers?",
+    "expected_answer": "I miss Twizzlers, I stock them up when visiting, and they are delicious.",
+    "id": 25
+  },
+  {
+    "question": "Twizzlers strawberry reviews",
+    "expected_answer": "Product received is as advertised. Twizzlers - Strawberry",
+    "id": 26
+  },
+  {
+    "question": "Does this review mention the flavor of the candy?",
+    "expected_answer": "No flavor",
+    "id": 27
+  },
+  {
+    "question": "Where can I find Amazon batteries for my garage door opener?",
+    "expected_answer": "I was so glad Amazon carried these batteries.  I need them for my garage door opener.",
+    "id": 28
+  },
+  {
+    "question": "What are these sugar-free toffees for?",
+    "expected_answer": "To help my Mum and father watch their sugar intake and satisfy their sweet tooth without feeling guilty.",
+    "id": 29
+  },
+  {
+    "question": "best hot sauce ever",
+    "expected_answer": "the flavour of this hot sauce makes it one of a kind!  We picked up a bottle once on a trip we were on and brought it back home with us and were totally blown away!",
+    "id": 30
+  },
+  {
+    "question": "What coffee machine did the reviewer purchase and use?",
+    "expected_answer": "Dolce Gusto Machine",
+    "id": 31
+  },
+  {
+    "question": "Amazon offer for tasteful product",
+    "expected_answer": "This offer is a great price and a great taste",
+    "id": 32
+  },
+  {
+    "question": "What is McCann's Instant Oatmeal's comparison to store brand oatmeal?",
+    "expected_answer": "McCann's Instant Oatmeal is as good as it gets for instant oatmeal, even better than organic, all-natural brands I have tried.",
+    "id": 33
+  },
+  {
+    "question": "What is the best flavor of oatmeal in this brand?",
+    "expected_answer": "The best flavor is the apple cinnamon.",
+    "id": 34
+  },
+  {
+    "question": "McCann's instant oatmeal texture",
+    "expected_answer": "holds its texture",
+    "id": 35
+  },
+  {
+    "question": "McCann's Instant Irish Oatmeal Variety Pack Review",
+    "expected_answer": "McCann's Instant Irish Oatmeal Variety Pack of Regular, Apples & Cinnamon, and Maple & Brown Sugar, 10-Count Boxes (Pack of 6)",
+    "id": 36
+  },
+  {
+    "question": "What is an alternative to grocery or health food store oats for those with celiac disease?",
+    "expected_answer": "McCann's instant oatmeal is a lifesaver and is half the price of grocery or health food store oats.",
+    "id": 37
+  },
+  {
+    "question": "What's the best way to make oatmeal according to this review?",
+    "expected_answer": "oatmeal, instant (make it with a half cup of low-fat milk and add raisins; nuke for 90 seconds)",
+    "id": 38
+  },
+  {
+    "question": "Does McCanns Instant Irish Oatmeal have good flavor when made with water or powder milk?",
+    "expected_answer": "Yes, it has a very tasteful flavor when made with water or powdered milk.",
+    "id": 39
+  },
+  {
+    "question": "McCANN'S Instant Irish Oatmeal, Variety Pack of Regular, Apples & Cinnamon, and Maple & Brown Sugar, 10-Count Boxes (Pack of 6) breakfast",
+    "expected_answer": "I ordered this for my wife as it was reccomended by our daughter. She has this almost every morning and likes all flavors. She's happy, I'm happy!!!",
+    "id": 40
+  },
+  {
+    "question": "What does the review say about the flavor combinations in the oatmeal variety packs?",
+    "expected_answer": "Maple and brown sugar, followed by apples and cinnamon, followed by regular",
+    "id": 41
+  },
+  {
+    "question": "McCann's oatmeal flavors in different packages",
+    "expected_answer": "This variety pack allows different tastes to be explored, as well as giving you a chance to experience the difference between McCann's and other well-known oatmeals. ",
+    "id": 42
+  },
+  {
+    "question": "what is mccann oatmeal",
+    "expected_answer": "McCann's Oatmeal is a breakfast cereal that tastes great and is healthy.",
+    "id": 43
+  },
+  {
+    "question": "McCann's Oatmeal Apples and Cinnamon good quality breakfast 2 minutes",
+    "expected_answer": "McCann's Oatmeal is a good quality choice.  Our favorite is the Apples and Cinnamon, but we find that none of these are overly sugary.  For a good hot breakfast in 2 minutes, this is excellent. Good Hot Breakfast",
+    "id": 44
+  },
+  {
+    "question": "How do McCann's steel cut oats compare to grocery store brands in terms of taste and convenience?",
+    "expected_answer": "McCann's steel cut oats taste much better to me than grocery store brands and are just as convenient.",
+    "id": 45
+  },
+  {
+    "question": "What are the flavor and texture issues with the Heartie Oatmeal mentioned in the review?",
+    "expected_answer": "It is somewhat mushy and doesn't have quite as much flavor as some supermarket brands, so I probably won't buy it again.",
+    "id": 46
+  },
+  {
+    "question": "What is the best apple cinnamon oatmeal flavor?",
+    "expected_answer": "apple cinnamon",
+    "id": 47
+  },
+  {
+    "question": "Does this product have a noticeable difference from the Oaker Oats brand?",
+    "expected_answer": "No, I do not see any difference between this and Oaker Oats brand - they are both mushy.",
+    "id": 48
+  },
+  {
+    "question": "What is the taste of the Maple and Brown Sugar flavor?",
+    "expected_answer": "The taste of the Maple and Brown Sugar flavor is described as 'really like'.",
+    "id": 49
+  },
+  {
+    "question": "Is this product healthy?",
+    "expected_answer": "No",
+    "id": 50
+  }
+]
