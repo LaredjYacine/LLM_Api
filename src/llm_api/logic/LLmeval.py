@@ -66,10 +66,9 @@ def eval():
         testing_case.append(test_case)
         print(f'appended item : {i}')
         i+=1
-        if i == 5:
 
-            evaluate(testing_case, metrics=[faithfulness_metric, answer_relevance_metric],cache_config=CacheConfig(write_cache=False, use_cache=False))
         sleep(6)
+    evaluate(testing_case, metrics=[faithfulness_metric, answer_relevance_metric],cache_config=CacheConfig(write_cache=False, use_cache=False))
 
 
 
