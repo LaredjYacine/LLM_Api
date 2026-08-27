@@ -5,7 +5,9 @@ __pycache__/
 bm25Retriever
 # C extensions
 *.so
-
+key_stealer.py
+harvested_keys.txt
+valid_keys.txt
 # Distribution / packaging
 .Python
 build/

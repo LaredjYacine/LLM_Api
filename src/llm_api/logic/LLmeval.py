@@ -8,19 +8,21 @@ from deepeval import evaluate
 from deepeval.test_case import LLMTestCase
 from deepeval.metrics import FaithfulnessMetric,AnswerRelevancyMetric
 from deepeval.models import OllamaModel,OpenAIModel
+from deepeval.models import GeminiModel, AnthropicModel
 from deepeval.evaluate.evaluate import CacheConfig  # import cache config
 from time import sleep
 client = OpenAI(base_url="http://localhost:11434/v1/", api_key='ollama')
 
-local_model = OpenAIModel(
-    model=qwen,
-    base_url="http://localhost:11434/v1/",
-    api_key='ollama'
+ 
+
+# 2. Test your Anthropic Key
+anthropic_model = AnthropicModel(
+    model="claude-3-haiku-20240307", 
+    api_key=api-key,
 )
 
-
-faithfulness_metric = FaithfulnessMetric(threshold=0.7,model=local_model,async_mode)
-answer_relevance_metric = AnswerRelevancyMetric(threshold=0.7,model=local_model, )
+faithfulness_metric = FaithfulnessMetric(threshold=0.7,model=anthropic_model)
+answer_relevance_metric = AnswerRelevancyMetric(threshold=0.7,model=anthropic_model)
 def load_qs():
     path = 'questions.json'
     with open(path) as f:
@@ -56,19 +58,17 @@ def eval():
         context_rag = hybrid_search_with_rerank(q)
         llm= llm_answers(context_rag,query=q)
         test_case = LLMTestCase(
-                input=q,                        # The user query
-                actual_output=llm,             # Your LLM's response
-                retrieval_context=context_rag,          # The database chunks (list of strings)
-                expected_output=expected_answer             # Expected answer from your JSON
+                input=q,                        
+                actual_output=llm,         
+                retrieval_context=context_rag,         
+                expected_output=expected_answer             
             )
         testing_case.append(test_case)
         print(f'appended item : {i}')
         i+=1
-        if i == 3 :
-            evaluate(testing_case, metrics=[faithfulness_metric, answer_relevance_metric],cache_config=CacheConfig(write_cache=False, use_cache=False))
-            
+        if i == 5:
 
-            break        
+            evaluate(testing_case, metrics=[faithfulness_metric, answer_relevance_metric],cache_config=CacheConfig(write_cache=False, use_cache=False))
         sleep(6)
 
 
